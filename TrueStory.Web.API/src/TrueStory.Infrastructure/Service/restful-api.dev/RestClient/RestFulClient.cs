@@ -44,7 +44,7 @@ namespace TrueStory.Infrastructure.Service.restful_api.dev.RestClient
     /// <summary>
     /// Client for interacting with the external REST API.
     /// </summary>
-    public class RestFulClient(IHttpClientFactory httpClientFactory) : IRestFulRestClient
+    public class RestFulClient() : IRestFulRestClient
     {
         private readonly IFlurlClient _flurlClient = new FlurlClientBuilder("https://api.restful-api.dev/")
             .Build();
