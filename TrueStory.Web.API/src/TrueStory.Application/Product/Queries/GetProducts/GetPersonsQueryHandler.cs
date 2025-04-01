@@ -26,6 +26,10 @@ public class GetProductsQueryHandler(IUnitOfWork _unitOfWork, IRestFulServiceImp
         var pages = await BasePaging.CreatePagedItemsAsync<T_Product, Guid, GetProductsModelResponse>
                            (_unitOfWork.ProductRepository, queryFiltered, request.PageNumber, request.PageSize);
 
+        if (pages.Items.Count == 0)
+            return pages;
+        
+
         var response = await _service.GetProductsAsync(pages.Items.Select(x => x.ID).ToList(), cancellationToken);
 
         pages.Items = ProductMapper.MapToProductsResponse(pages.Items,response);
