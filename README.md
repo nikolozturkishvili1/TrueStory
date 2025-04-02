@@ -1,14 +1,22 @@
 # Introduction 
 TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+#Coding task
+Develop a simple RESTful Web API using C# that integrates with the mock API provided at https://restful-api.dev. Your API should extend the functionality of the mock API by adding additional processing or features.
 
-#1 Project Overview
+Technical Requirements:
+Framework .NET 8.0
+API Methods: Implement at least three API methods:
+To retrieve data from the mock API with the ability to filter by name(substring) and paging
+To add data to the mock API
+To remove data via the mock API
+Validation:
+Implement proper validation for the model.
+Ensure all required fields are provided and valid when creating or updating a product.
+Error Handling:
+Implement proper error handling.
+
+#Project Overview
 This is a .NET 8  application
 Uses Clean Architecture principles
 Implements CQRS pattern with MediatR
